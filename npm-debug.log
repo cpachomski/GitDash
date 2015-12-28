@@ -1,0 +1,26 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/Chris/.nvm/versions/io.js/v3.3.1/bin/iojs',
+1 verbose cli   '/Users/Chris/.nvm/versions/io.js/v3.3.1/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'yolo' ]
+2 info using npm@2.14.3
+3 info using node@v3.3.1
+4 verbose stack Error: Invalid name: "Github Labeler"
+4 verbose stack     at ensureValidName (/Users/Chris/.nvm/versions/io.js/v3.3.1/lib/node_modules/npm/node_modules/normalize-package-data/lib/fixer.js:331:15)
+4 verbose stack     at Object.module.exports.fixNameField (/Users/Chris/.nvm/versions/io.js/v3.3.1/lib/node_modules/npm/node_modules/normalize-package-data/lib/fixer.js:210:5)
+4 verbose stack     at /Users/Chris/.nvm/versions/io.js/v3.3.1/lib/node_modules/npm/node_modules/normalize-package-data/lib/normalize.js:32:38
+4 verbose stack     at Array.forEach (native)
+4 verbose stack     at normalize (/Users/Chris/.nvm/versions/io.js/v3.3.1/lib/node_modules/npm/node_modules/normalize-package-data/lib/normalize.js:31:15)
+4 verbose stack     at final (/Users/Chris/.nvm/versions/io.js/v3.3.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:338:5)
+4 verbose stack     at then (/Users/Chris/.nvm/versions/io.js/v3.3.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:113:5)
+4 verbose stack     at /Users/Chris/.nvm/versions/io.js/v3.3.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:300:12
+4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (evalmachine.<anonymous>:380:3)
+5 verbose cwd /Users/Chris/Documents/webpack/react_sgetti
+6 error Darwin 15.0.0
+7 error argv "/Users/Chris/.nvm/versions/io.js/v3.3.1/bin/iojs" "/Users/Chris/.nvm/versions/io.js/v3.3.1/bin/npm" "run" "yolo"
+8 error node v3.3.1
+9 error npm  v2.14.3
+10 error Invalid name: "Github Labeler"
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]

@@ -5,7 +5,6 @@ import localLinks from 'local-links'
 export default React.createClass({
   displayName: "Linker",
 
-
   onClick (event) {
     const pathname = localLinks.getLocalPathname(event);
 
@@ -16,12 +15,10 @@ export default React.createClass({
   },
 
   render () {
-
     return (
       <div {...this.props} onClick={this.onClick}>
         {this.props.children}
       </div>
     )
   }
-
-})
+});
