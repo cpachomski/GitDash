@@ -24,11 +24,11 @@ export default Router.extend({
   },
 
   public () {
-    this.renderPage(<PublicPage/>, {layout: false})
+    this.renderPage(<PublicPage/>, {layout: false});
   },
 
   repos () {
-    this.renderPage(<ReposPage/>)
+    this.renderPage(<ReposPage/>);
   }
 
 });
