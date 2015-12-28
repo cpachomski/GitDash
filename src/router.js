@@ -3,15 +3,26 @@ import React from 'react'
 import PublicPage from './pages/public'
 import ReposPage from './pages/repos'
 import Layout from './layout'
+import Linker from './helpers/linker'
+
 
 export default Router.extend({
 
-  renderPage ( page, opts = {layout: true} ) {
+  renderPage ( page, opts = {layout: true, linker: true} ) {
+    //add Layout wrapper
     if (opts.layout) {
       page = (
         <Layout>
-          {page}
+         {page}
         </Layout>
+      )
+    }
+
+    if (opts.linker){
+      page = (
+        <Linker>
+          {page}
+        </Linker>
       )
     }
 
