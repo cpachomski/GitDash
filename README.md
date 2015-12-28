@@ -1,7 +1,8 @@
-# Sgetti-React
+# Github Labeler
 
 * Ampersand
 * ES6
 * React
 * Webapack (so cool)
-* stylus for default css goodies
+* Stylus for default css goodies
+
