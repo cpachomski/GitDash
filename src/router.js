@@ -42,12 +42,12 @@ export default Router.extend({
 
   repos () {
     this.renderPage(<ReposPage/>);
-  }
+  },
 
   login() {
-    window.location = 'https://github.com/login/oauth/authorize' + qs.stringify({
-      client_id: ,
-      redirect_uri: ,
+    window.location = 'https://github.com/login/oauth/authorize?' + qs.stringify({
+      client_id: 'c8648178b298b4cc1db0',
+      redirect_uri: window.location.origin + '/auth/callback',
       scope: 'user, repo',
 
     })
