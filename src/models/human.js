@@ -5,22 +5,26 @@ export default Model.extend({
 
   initialize () {
     this.token = window.localStorage.token;
-
-
-
     this.on('change:token', this.onTokenChange);
+
   },
 
   onTokenChange () {
     window.localStorage.token = this.token;
+    this.fetchInitialData();
   },
 
-
   ajaxConfig() {
-    return{
+    return {
       headers: {
         Authorization: 'token ' + this.token
       }
+    }
+  },
+
+  fetchInitialData () {
+    if (this.token) {
+      this.fetch();
     }
   },
 
