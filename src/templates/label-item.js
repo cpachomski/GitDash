@@ -4,11 +4,13 @@ import ampersandMixin from 'ampersand-react-mixin'
 export default React.createClass({
   mixins: [ampersandMixin],
 
-  onEditClick () {
+  onEditClick (event) {
+    event.preventDefault();
     this.props.label.editing = true;
   },
 
-  onCancelClick () {
+  onCancelClick (event) {
+    event.preventDefault();
     this.props.label.editing = false;
   },
 
