@@ -18,8 +18,7 @@ export default Model.extend(githubMixin, {
   },
 
   update (attributes) {
-    const oldAtrributes = this.attributes
-    console.log(this.url());
+    const oldAtrributes = this.getAttributes({props: true, session: false})
     xhr({
       url: this.url(),
       json: attributes,
@@ -30,7 +29,6 @@ export default Model.extend(githubMixin, {
     }, (err, req, body) => {
       if (err){
         this.set(oldAttributes);
-        alert(err);
       }
     });
     this.set(attributes)
