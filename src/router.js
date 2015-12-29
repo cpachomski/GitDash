@@ -15,7 +15,7 @@ export default Router.extend({
     //add Layout wrapper
     if (opts.layout) {
       page = (
-        <Layout>
+        <Layout human={app.human}>
          {page}
         </Layout>
       )
