@@ -11,7 +11,7 @@ export default React.createClass({
 
     return(
       <div>
-        <h2>Repos </h2>
+        <h2>Repos</h2>
         <ul>
           {repos.map( (repo) => {
             return (
