@@ -1,5 +1,5 @@
 {
-  "name": "Github Labeler",
+  "name": "GithubLabeler",
   "version": "1.43.0",
   "dependencies": {
     "ampersand-app": "^1.0.4",
