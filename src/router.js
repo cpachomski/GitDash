@@ -7,6 +7,7 @@ import PublicPage from './pages/public'
 import ReposPage from './pages/repos'
 import Layout from './layout'
 import Linker from './helpers/linker'
+import RepoDetail from './pages/repo-detail'
 
 
 export default Router.extend({
@@ -37,6 +38,7 @@ export default Router.extend({
     'repos': 'repos',
     'login': 'login',
     'logout': 'logout',
+    'repo/:owner/:name': 'repoDetail',
     'auth/callback?:query' : 'authCallback'
   },
 
@@ -46,6 +48,11 @@ export default Router.extend({
 
   repos () {
     this.renderPage(<ReposPage repos={app.human.repos} />);
+  },
+
+  repoDetail (owner, name) {
+    const model = app.human.repos.getByFullName(owner + '/' + name)
+    this.renderPage(<RepoDetail repo={model}/>)
   },
 
   login () {

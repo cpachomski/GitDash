@@ -17,7 +17,7 @@ export default React.createClass({
             return (
               <li key={repo.id}>
                 <span className="octicon octicon-repo"></span>
-                <a href=""> {repo.full_name} </a>
+                <a href={repo.appUrl}> {repo.full_name} </a>
               </li>
             )
           })}
