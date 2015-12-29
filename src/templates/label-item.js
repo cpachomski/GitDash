@@ -4,6 +4,11 @@ import ampersandMixin from 'ampersand-react-mixin'
 export default React.createClass({
   mixins: [ampersandMixin],
 
+  getInitialState () {
+    const {name, color} = this.props.label
+    return {name, color}
+  },
+
   onEditClick (event) {
     event.preventDefault();
     this.props.label.editing = true;
@@ -19,6 +24,12 @@ export default React.createClass({
     this.props.label.destroy({wait: true});
   },
 
+  onNameChange (event) {
+    this.setState({
+      name: event.target.value
+    })
+  },
+
   render () {
     const {label} = this.props;
     const cssColor = '#' + label.color;
@@ -29,7 +40,7 @@ export default React.createClass({
       content = (
         <form className='label'>
           <span className='label-color avatar avatar-small avatar-rounded'>&nbsp;</span>
-          <input name='name'/>
+          <input name='name' onChange={this.onNameChange} value={this.state.name} />
           <input name='color'/>
           <button type='submit' className='button button-small'>Save</button>
           <button onClick={this.onCancelClick} type='button' className='button button-small button-unstyled'>cancel</button>
