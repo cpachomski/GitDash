@@ -1,4 +1,5 @@
 import Model from 'ampersand-model'
+import githubMixin from '../helpers/github-mixin'
 
 
 export default Model.extend({
@@ -12,7 +13,7 @@ export default Model.extend({
     appUrl: {
       deps: ['full_name'],
       fn () {
-        return '/repo/' + this.full_name
+        return '/repo/' + this.full_name;
       }
     }
   }
