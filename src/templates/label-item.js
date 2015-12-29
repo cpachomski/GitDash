@@ -32,6 +32,7 @@ export default React.createClass({
 
   render () {
     const {label} = this.props;
+    const {color} = this.state;
     const cssColor = '#' + label.color;
     let content;
 
@@ -41,7 +42,7 @@ export default React.createClass({
         <form className='label'>
           <span className='label-color avatar avatar-small avatar-rounded'>&nbsp;</span>
           <input name='name' onChange={this.onNameChange} value={this.state.name} />
-          <input name='color'/>
+          <input name='color' onChange={this.onColorChange} value={color}/>
           <button type='submit' className='button button-small'>Save</button>
           <button onClick={this.onCancelClick} type='button' className='button button-small button-unstyled'>cancel</button>
         </form>
