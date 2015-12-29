@@ -36,6 +36,7 @@ export default Router.extend({
     '': 'public',
     'repos': 'repos',
     'login': 'login',
+    'logout': 'logout',
     'auth/callback?:query' : 'authCallback'
   },
 
@@ -56,6 +57,11 @@ export default Router.extend({
     })
   },
 
+  logout () {
+    window.localStorage.clear();
+    window.location = "/";
+  },
+
   authCallback (query) {
     query = qs.parse(query);
 
@@ -63,8 +69,11 @@ export default Router.extend({
       url: 'https://thawing-plains-4936.herokuapp.com/authenticate/' + query.code,
       json: true
     }, (err, req, body) => {
-      console.log(body.token);
+      //Give token to human logged int model
       window.app.human.token = body.token
+
+      //go to repos page with github token and remove auth/callback page from browser history
+      this.redirectTo('/repos')
     })
   }
 
