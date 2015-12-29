@@ -5,13 +5,13 @@ import Human from './models/human'
 
 window.app = app;
 
-window.app = {
+app.extend({
   init () {
     this.human = new Human();
     this.router = new Router();
     this.router.history.start();
   }
-}
+})
 
 
-window.app.init();
+app.init();

@@ -12,6 +12,7 @@ export default React.createClass({
     if (pathname) {
       event.preventDefault();
       app.router.history.navigate(pathname);
+
     }
   },
 
