@@ -8,10 +8,10 @@ export default React.createClass({
     return(
       <div className='container'>
         <header role='banner'>
-          <h1>Labels</h1>
+          <h1>Github Labeler</h1>
         </header>
         <div>
-          <p>We label stuff for you, because, we can&trade;</p>
+          <p>I don't finish these anyway so it doesn't event matter</p>
           <a href='/login' className='button button-large'>
             <span className='mega-octicon octicon-mark-github'></span> Login with GitHub
           </a>
