@@ -8,6 +8,7 @@ window.app = app;
 app.extend({
   init () {
     this.human = new Human();
+    this.human.fetchInitialData();
     this.router = new Router();
     this.router.history.start();
   }
