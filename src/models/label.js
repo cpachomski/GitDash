@@ -1,6 +1,5 @@
-import Model form 'ampersand-model'
+import Model from 'ampersand-model'
 import githubMixin from '../helpers/github-mixin'
-
 
 export default Model.extend({
   props: {

@@ -5,9 +5,9 @@ import xhr from 'xhr'
 import app from 'ampersand-app'
 import PublicPage from './pages/public'
 import ReposPage from './pages/repos'
+import RepoDetail from './pages/repo-detail'
 import Layout from './layout'
 import Linker from './helpers/linker'
-import RepoDetail from './pages/repo-detail'
 
 
 export default Router.extend({
@@ -53,6 +53,7 @@ export default Router.extend({
   repoDetail (owner, name) {
     const model = app.human.repos.getByFullName(owner + '/' + name)
     this.renderPage(<RepoDetail repo={model}/>)
+    console.log(model);
   },
 
   login () {
