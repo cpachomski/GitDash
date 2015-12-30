@@ -8,7 +8,7 @@ import ReposPage from './pages/repos'
 import RepoDetail from './pages/repo-detail'
 import Layout from './layout'
 import Linker from './helpers/linker'
-
+import MessagePage from './pages/message-page'
 
 
 function requiresAuth (handlerName) {
@@ -51,7 +51,8 @@ export default Router.extend({
     'login': 'login',
     'logout': 'logout',
     'repo/:owner/:name': requiresAuth('repoDetail'),
-    'auth/callback?:query' : 'authCallback'
+    'auth/callback?:query' : 'authCallback',
+    '*404': 'fourOhFour'
   },
 
   public () {
@@ -94,6 +95,10 @@ export default Router.extend({
       //go to repos page with github token and remove auth/callback page from browser history
       this.redirectTo('/repos')
     })
+  },
+
+  fourOhFour () {
+    this.renderPage(<MessagePage title="Not Found" body="Sorry Nothing here" />)
   }
 
 });
