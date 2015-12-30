@@ -34,6 +34,6 @@ export default Model.extend( githubMixin, {
 
   session: {
     token: 'string'
-
   }
+
 });

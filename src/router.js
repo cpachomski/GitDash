@@ -10,6 +10,18 @@ import Layout from './layout'
 import Linker from './helpers/linker'
 
 
+
+function requiresAuth (handlerName) {
+  return function () {
+    if (app.human.token) {
+      this[handlerName].apply(this, arguments)
+    } else {
+      this.redirectTo('/');
+    }
+  }
+}
+
+
 export default Router.extend({
 
   renderPage ( page, opts = {layout: true, linker: true} ) {
@@ -35,10 +47,10 @@ export default Router.extend({
 
   routes: {
     '': 'public',
-    'repos': 'repos',
+    'repos': requiresAuth('repos'),
     'login': 'login',
     'logout': 'logout',
-    'repo/:owner/:name': 'repoDetail',
+    'repo/:owner/:name': requiresAuth('repoDetail'),
     'auth/callback?:query' : 'authCallback'
   },
 
