@@ -8,7 +8,10 @@ const config = {
   'trub.surge.sh': {
     authUrl: 'https://trub.herokuapp.com/authenticate',
     clientId: '1560b89757565846fec7'
-  },
-}[location.hostname]
+  }
+}[window.location.hostname]
+
+
+console.log(config);
 
 export default config;
