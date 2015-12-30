@@ -11,7 +11,8 @@ export default React.createClass({
     this.props.labels.add({
       name: '',
       color: '',
-      editing: true
+      editing: true,
+      saved: false
     }, {at: 0})
   },
 
