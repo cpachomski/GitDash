@@ -9,6 +9,7 @@ import RepoDetail from './pages/repo-detail'
 import Layout from './layout'
 import Linker from './helpers/linker'
 import MessagePage from './pages/message-page'
+import config from './config'
 
 
 function requiresAuth (handlerName) {
@@ -70,7 +71,7 @@ export default Router.extend({
 
   login () {
     window.location = 'https://github.com/login/oauth/authorize?' + qs.stringify({
-      client_id: 'c8648178b298b4cc1db0',
+      client_id: config.clientId,
       redirect_uri: window.location.origin + '/auth/callback',
       scope: 'user, repo',
 
@@ -86,10 +87,10 @@ export default Router.extend({
     query = qs.parse(query);
 
     xhr({
-      url: 'https://thawing-plains-4936.herokuapp.com/authenticate/' + query.code,
+      url: config.authUrl + '/' + query.code,
       json: true
     }, (err, req, body) => {
-      //Give token to human logged int model
+      //Give token to human logged in model
       window.app.human.token = body.token
 
       //go to repos page with github token and remove auth/callback page from browser history
