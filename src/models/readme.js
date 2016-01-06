@@ -3,7 +3,11 @@ import githubMixin from '../helpers/github-mixin'
 import xhr from 'xhr'
 
 export default Model.extend(githubMixin, {
-  idAttribute: 'sha',
+  idAttribute: 'url',
+
+  url () {
+    return this.parent.url() + '/readme';
+  },
 
   props: {
     size: 'number',
