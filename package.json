@@ -16,7 +16,7 @@
     "css-loader": "^0.15.1",
     "file-loader": "^0.8.4",
     "hjs-webpack": "^2.6.0",
-"json-loader": "^0.5.2",
+    "json-loader": "^0.5.2",
     "local-links": "^1.4.0",
     "lodash.assign": "^3.2.0",
     "lodash.has": "^3.2.1",
@@ -48,5 +48,8 @@
     "deploy": "surge -p public -d trub.surge.sh",
     "start": "webpack-dev-server",
     "yolo": "npm run build && npm run deploy"
+  },
+  "devDependencies": {
+    "marked": "^0.3.5"
   }
 }
