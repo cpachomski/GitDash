@@ -3,7 +3,7 @@ import githubMixin from '../helpers/github-mixin'
 import xhr from 'xhr'
 
 export default Model.extend(githubMixin, {
-  idAttribute: 'url',
+  idAttribute: 'sha',
 
   url () {
     return this.parent.url() + '/readme';
@@ -26,10 +26,6 @@ export default Model.extend(githubMixin, {
     }
   },
 
-
-  isNew () {
-    return !this.saved
-  },
 
   update (attributes) {
     const oldAttributes = this.getAttributes({props: true, session: false})

@@ -7,16 +7,15 @@ export default React.createClass({
 
 
   render () {
+
     const {readme} = this.props;
 
     return (
-      <p> {readme.content} </p>
+      <div className="readme-content">
+        <p></p>
+      </div>
     )
 
   }
-
-
-
-
 
 });
