@@ -1,6 +1,7 @@
 import Model from 'ampersand-model'
 import githubMixin from '../helpers/github-mixin'
 import LabelCollection from './label-collection'
+import Readme from './readme'
 
 
 export default Model.extend(githubMixin, {
@@ -25,6 +26,10 @@ export default Model.extend(githubMixin, {
 
   collections: {
     labels: LabelCollection
+  },
+
+  children: {
+    readme: Readme
   },
 
   fetch () {
