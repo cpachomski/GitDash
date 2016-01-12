@@ -10,9 +10,10 @@ export default React.createClass({
 
     const {readme} = this.props;
 
+
     return (
       <div className="readme-content">
-        <p></p>
+        <p> yo {readme}</p>
       </div>
     )
 

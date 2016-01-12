@@ -6,6 +6,7 @@ export default Model.extend(githubMixin, {
   idAttribute: 'sha',
 
   url () {
+    console.log(this.parent.url() + '/readme');
     return this.parent.url() + '/readme';
   },
 

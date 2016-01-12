@@ -4,7 +4,8 @@ export default {
   ajaxConfig () {
       return {
         headers: {
-          Authorization: 'token ' + app.human.token
+          Authorization: 'token ' + app.human.token,
+
         }
       }
     }

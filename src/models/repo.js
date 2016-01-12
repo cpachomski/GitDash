@@ -6,7 +6,7 @@ import Readme from './readme'
 
 export default Model.extend(githubMixin, {
   url () {
-    return 'https://api.github.com/repos/' + this.full_name
+    return 'https://api.github.com/repos/' + this.full_name;
   },
 
   props: {
@@ -35,6 +35,7 @@ export default Model.extend(githubMixin, {
   fetch () {
     Model.prototype.fetch.apply(this, arguments)
     this.labels.fetch()
+    this.readme.fetch()
   },
 
 });

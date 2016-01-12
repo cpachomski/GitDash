@@ -66,7 +66,6 @@ export default Router.extend({
 
   repoDetail (owner, name) {
     const model = app.human.repos.getByFullName(owner + '/' + name)
-    console.log(model);
     this.renderPage(<RepoDetail repo={model} labels={model.labels} readme={model.readme} />)
   },
 
