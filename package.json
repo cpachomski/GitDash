@@ -50,6 +50,7 @@
     "yolo": "npm run build && npm run deploy"
   },
   "devDependencies": {
+    "base-64": "^0.1.0",
     "marked": "^0.3.5"
   }
 }
