@@ -8,7 +8,7 @@ export default React.createClass({
 
   render () {
     const {repos} = this.props
-
+    console.log({repos});
     return(
       <div>
         <h2>Repos</h2>

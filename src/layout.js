@@ -24,7 +24,6 @@ export default React.createClass({
         <div className='container'>
           {this.props.children}
         </div>
-      </div>
-    )
+      </div>)
   }
 });

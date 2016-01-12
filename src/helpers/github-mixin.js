@@ -5,7 +5,6 @@ export default {
       return {
         headers: {
           Authorization: 'token ' + app.human.token,
-
         }
       }
     }

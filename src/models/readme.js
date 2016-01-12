@@ -6,7 +6,6 @@ export default Model.extend(githubMixin, {
   idAttribute: 'sha',
 
   url () {
-    console.log(this.parent.url() + '/readme');
     return this.parent.url() + '/readme';
   },
 
@@ -35,7 +34,7 @@ export default Model.extend(githubMixin, {
       json: attributes,
       method: 'PATCH',
       headers: {
-        Authorization: 'token ' + app.human.token
+        Authorization: 'token ' + app.human.token,
       }
     }, (err, req, body) => {
       if (err){

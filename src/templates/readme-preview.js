@@ -13,7 +13,7 @@ export default React.createClass({
 
     return (
       <div className="readme-content">
-        <p> yo {readme}</p>
+        <p> yo {readme.content}</p>
       </div>
     )
 
