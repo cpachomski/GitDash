@@ -1,5 +1,6 @@
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
+import base64 from 'base-64'
 
 
 export default React.createClass({
@@ -9,6 +10,7 @@ export default React.createClass({
   render () {
 
     const {readme} = this.props;
+    readme.content = base64.decode(readme.content);
 
 
     return (
