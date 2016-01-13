@@ -10,6 +10,9 @@ export default React.createClass({
   render () {
     const {repos} = this.props
     console.log(repos)
+
+
+
     if( !repos ){
       return (
         <div> loading </div>
