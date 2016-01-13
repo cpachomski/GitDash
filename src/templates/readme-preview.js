@@ -23,7 +23,8 @@ export default React.createClass({
 
     return (
       <div className="readme-content">
-          <p> yo {new Buffer(readme.content + '', 'base64').toString('ascii')}</p>
+          <h4> README </h4>
+          <p> {new Buffer(readme.content + '', 'base64').toString('ascii')}</p>
       </div>
     )
 
