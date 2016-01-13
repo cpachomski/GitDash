@@ -8,8 +8,11 @@ import base64 from 'base64-js'
 export default React.createClass({
   mixins: [ampersandMixin],
 
-  componentDidMount () {
-
+  getInitialState () {
+    return {
+      duck: '',
+      decodedReadme: '',
+    }
   },
 
   render () {
@@ -17,13 +20,10 @@ export default React.createClass({
     // this.props.decodedReadme = new Buffer(this.props.readme.content, 'base64').toString('ascii');
 
 
-    let duck = new Buffer(this.props.readme.content, 'base64').toString('ascii')
-
-    console.log(duck)
 
     return (
       <div className="readme-content">
-        <p> yo {duck}</p>
+          <p> yo {new Buffer(readme.content + '', 'base64').toString('ascii')}</p>
       </div>
     )
 
