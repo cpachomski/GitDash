@@ -20,7 +20,7 @@ export default React.createClass({
           <h1>GitDash</h1>
         </header>
         <div>
-          <p>Maybe you'll finally finish that side project. You probably won't</p>
+          <p>Maybe you'll finally finish that side project. Maybe you won't <br/><span className='white'>You probably won't</span></p>
           <a href='/login' onMouseOver={this.mouseOver} onMouseOut={this.mouseOut} className='button button-large'>
             <span className='mega-octicon octicon-mark-github'></span> Login with GitHub
           </a>
