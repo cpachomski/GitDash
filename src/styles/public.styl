@@ -3,10 +3,6 @@ gray = #333
 
 body
 	transition: all 0.5s ease-out
-	-webkit-transition: all 0.5s ease-out
-	-moz-transition: all 0.5s ease-out
-	-ms-transition: all 0.5s ease-out
-
 	&.hover-active
 		background-color: gray
 
@@ -14,7 +10,7 @@ body
 
 			h1, p
 				color:white
-				border-bottom: 3px dashed white
+				border-bottom: 1px dashed white
 
 
 
@@ -27,20 +23,17 @@ body
 	-moz-transform: translate(-50%, -50%)
 	-ms-transform: translate(-50%, -50%)
 
+	h1
+		margin-bottom: 15px
+	p
+		margin-bottom: 50px
 	h1, p
 		display: inline
 		color: gray
-		padding-bottom: 5px;
-		line-height: 50px
-		border-bottom: 3px dashed white;
+		border-bottom: 1px dashed white;
 		transition: color 0.5s ease-in
-	    -webkit-transition: color 0.5s ease-in
-	    -moz-transition: color 0.5s ease-in
-	    -ms-transition: color 0.5s ease-in
-	    transition: border-color 1s ease-in
-	    -webkit-transition: border-color 1s ease-in
-	    -moz-transition: border-color 1s ease-in
-	    -ms-transition: border-color 1s ease-in
+	  transition: border-color 0.5s ease-in 1s
+
 
 
 	.button

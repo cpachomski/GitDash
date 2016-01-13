@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "base-64": "^0.1.0",
+    "js-base64": "^2.1.9",
     "marked": "^0.3.5",
     "utf8": "^2.1.1"
   }
