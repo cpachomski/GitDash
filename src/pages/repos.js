@@ -9,26 +9,28 @@ export default React.createClass({
 
   render () {
     const {repos} = this.props
-
+    console.log(repos)
     if( !repos ){
       return (
         <div> loading </div>
       )
     }
     return(
-      <div>
-        <h2>Repos</h2>
+      <div className='repos-listing'>
+        <div className='repos-listing-content'>
+          <h2>Repos</h2>
 
-        <ul>
-          {repos.map( (repo) => {
-            return (
-              <li key={repo.id}>
-                <span className="octicon octicon-repo"></span>
-                <a href={repo.appUrl}> {repo.full_name} </a>
-              </li>
-            )
-          })}
-        </ul>
+          <ul>
+            {repos.map( (repo) => {
+              return (
+                <li key={repo.id}>
+                  <span className="octicon octicon-repo"></span>
+                  <a href={repo.appUrl}> {repo.full_name} </a>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
       </div>
     )
   }
