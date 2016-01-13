@@ -1,11 +1,12 @@
 # GitDash 
 ###[Go to app](http://gitdash.surge.sh)
 
-####An oauth dashboard to keep track of your repos and edit their contents. Isomorphic rendering provided by HJS webpack to ensure fast pageload on mobile devises
+####An dashboard to keep track of your repos and edit their contents. Isomorphic rendering provided by HJS webpack to ensure fast pageload on mobile devices.
 
 * Ampersand
 * ES6
 * React
+* Github API (oauth)
 * Webpack (so cool)
 * HJS-Webpack (Henrik Joreteg's excellent webpack config.)
 * Stylus for default css goodies
