@@ -45,7 +45,7 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "deploy": "surge -p public -d trub.surge.sh",
+    "deploy": "surge -p public -d gitdash.surge.sh",
     "start": "webpack-dev-server",
     "yolo": "npm run build && npm run deploy"
   },

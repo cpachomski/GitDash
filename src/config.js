@@ -5,9 +5,9 @@ const config = {
 
   },
 
-  'trub.surge.sh': {
-    authUrl: 'https://trub.herokuapp.com/authenticate',
-    clientId: '1560b89757565846fec7'
+  'gitdash.surge.sh': {
+    authUrl: 'https://cppgitdash.herokuapp.com/authenticate',
+    clientId: 'be934f802c4f3e23ad8c'
   }
 }[window.location.hostname]
 
