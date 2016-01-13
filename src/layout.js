@@ -17,7 +17,7 @@ export default React.createClass({
           <label htmlFor='menu-toggle'>Menu</label>
           <ul className='list-unstyled list-inline cf'>
             <li>GitDash</li>
-            <li><a href='/repos'>Repos</a></li>
+            <li><a href='/repos'>Repos</a><span className="octicon octicon-repo"></span></li>
             <li className='pull-right'><a href='/logout'>Logout</a> { human.login }</li>
           </ul>
         </nav>
