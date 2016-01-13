@@ -1,4 +1,6 @@
-# Trub
+# GitDash
+
+<p>An oauth dashboard to keep track of your repos and edit their contents
 
 * Ampersand
 * ES6
