@@ -6,12 +6,19 @@ export default React.createClass({
   mixins: [ampersandMixin],
   displayName: "repos",
 
+
   render () {
     const {repos} = this.props
-    console.log({repos});
+
+    if( !repos ){
+      return (
+        <div> loading </div>
+      )
+    }
     return(
       <div>
         <h2>Repos</h2>
+
         <ul>
           {repos.map( (repo) => {
             return (
