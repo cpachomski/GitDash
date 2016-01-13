@@ -21,9 +21,19 @@ export default React.createClass({
         </header>
         <div>
           <p>Maybe you'll finally finish that side project. Maybe you won't <br/><span className='white'>You probably won't</span></p>
+
           <a href='/login' onMouseOver={this.mouseOver} onMouseOut={this.mouseOut} className='button button-large'>
             <span className='mega-octicon octicon-mark-github'></span> Login with GitHub
           </a>
+
+          <div className='login-button'>
+            <svg height='60' width='300'>
+              <rect className='shape' height='60' width='300'/>
+              <div className='login-button-text'>
+                 <span className='mega-octicon octicon-mark-github'></span> Login with GitHub
+              </div>
+            </svg>
+          </div>
         </div>
       </div>
     )

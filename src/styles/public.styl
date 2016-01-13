@@ -35,15 +35,32 @@ body
 		color: gray
 		border-bottom: 3px dashed white;
 		transition: color 0.5s ease-in
-	  transition: border-color 0.5s ease-in 1s
+	  	transition: border-color 0.5s ease-in 1s
 
 	p
 		border-bottom: 0px
 		.white
 			color: transparent
-
 			transition-delay: 2s
 
+	.login-button
+		position: relative
+		width: 300px
+		height: 60px
+		background-color: gray
+
+		.login-button-text
+			color: white
+			position: absolute
+			top: 50%
+			left: 50%
+			min-width: 300px
+			text-align: center
+			font-size: 22px
+			transform: translate(-50%, -50%)
+
+		.shape
+			fill: transparent
 
 	.button
 		background-color: gray
