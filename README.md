@@ -8,7 +8,7 @@
 * React
 * Github API (oauth)
 * Webpack (so cool)
-* HJS-Webpack (Henrik Joreteg's excellent webpack config.)
+* HJS-Webpack (Henrik Joreteg's excellent webpack config)
 * Stylus for default css goodies
 * yeti.css for basic styles
 * trub prerenders some pages so it'll load fast on slow devices
