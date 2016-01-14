@@ -1,7 +1,7 @@
 # GitDash 
 ###[Go to app](http://gitdash.surge.sh)
 
-####An dashboard to keep track of your repos and edit their contents. Isomorphic rendering provided by HJS webpack to ensure fast pageload on mobile devices.
+####A dashboard to keep track of your repos and edit their contents. Isomorphic rendering provided by HJS webpack to ensure fast pageload on mobile devices.
 
 * Ampersand
 * ES6
