@@ -9,13 +9,17 @@ body
 		.public-container
 			h1
 				color:white
-				border-bottom: 3px dashed white
+				line
+					stroke-width: 5px
+					stroke: white
+					stroke-dasharray: 10 10
+					stroke-dashoffset: 0
+
 			p
 				color: white
 				border-bottom: white
 				.white
 					color: white
-
 
 
 .public-container
@@ -33,9 +37,22 @@ body
 	h1, p
 		display: inline
 		color: gray
-		border-bottom: 3px dashed white;
 		transition: color 0.5s ease-in
 	  	transition: border-color 0.5s ease-in 1s
+	h1
+		position: relative
+		svg
+			position: absolute
+			bottom: 0px
+			left: 0px
+
+			line
+				stroke-width: 5px
+				stroke: gray
+				stroke-dasharray: 10 10
+				stroke-dashoffset: 100px
+				transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s ease-out;
+
 
 	p
 		border-bottom: 0px
@@ -66,7 +83,7 @@ body
 			top: 50%
 			left: 50%
 			line-height: 55px
-			height: (100% - 5px)
+			height: (100% - 7)
 			width: calc(100% - 5px)
 			text-align: center
 			font-size: 22px
@@ -79,8 +96,6 @@ body
 			stroke-width: 5px
 			stroke: white
 			transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s ease-out;
-
-
 
 
 	.button
