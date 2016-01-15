@@ -11,6 +11,5 @@
 * HJS-Webpack (Henrik Joreteg's excellent webpack config)
 * yeti.css for default css goodies
 * Stylus for EZ stylesheets
-* trub prerenders some pages so it'll load fast on slow devices
 
 
