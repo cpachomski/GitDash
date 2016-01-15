@@ -18,8 +18,8 @@ export default React.createClass({
       <div className='public-container'>
         <header role='banner'>
           <h1>GitDash
-            <svg height='5' width='145'>
-              <line x1='0' y1='0' x2='145' y2='0' className="h1-underline" />  
+            <svg height='5' width='150'>
+              <line x1='0' y1='0' x2='150' y2='0' className="h1-underline" />  
             </svg>
           </h1>
 
