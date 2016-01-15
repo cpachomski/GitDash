@@ -20,7 +20,6 @@ export default React.createClass({
           <h1>GitDash
             <svg height='5' width='145'>
               <line x1='0' y1='0' x2='145' y2='0' className="h1-underline" />  
-              Sorry, your browser doesn't support svg :(
             </svg>
           </h1>
 
