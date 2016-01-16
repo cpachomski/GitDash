@@ -8,6 +8,10 @@ export default React.createClass({
 
   displayName: "RepoDetail",
 
+  propTypes: {
+    repo: React.PropTypes.object.isRequired
+  },
+
   onAddClick () {
     this.props.labels.add({
       name: '',

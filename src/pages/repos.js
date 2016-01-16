@@ -4,20 +4,22 @@ import ampersandMixin from 'ampersand-react-mixin'
 
 export default React.createClass({
   mixins: [ampersandMixin],
+
   displayName: "repos",
 
+  propTypes: {
+    repos: React.PropTypes.object.isRequired
+  },
 
   render () {
     const {repos} = this.props
-    console.log(repos)
-
-
 
     if( !repos ){
       return (
         <div> loading </div>
       )
     }
+
     return(
       <div className='repos-listing'>
         <div className='repos-listing-content'>
