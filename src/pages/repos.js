@@ -29,8 +29,13 @@ export default React.createClass({
             {repos.map( (repo) => {
               return (
                 <li key={repo.id}>
+                  <div className='slides-up'>
+                      <a href={repo.appUrl}> {repo.full_name.split('/').pop()} </a>
+                      <svg width="100" height="10px" >
+                        <line x1='0' y1='0' x2='100%'  y2='0' className="card-header-underline" />
+                      </svg>
+                  </div>
                   <span className="octicon octicon-repo"></span>
-                  <a href={repo.appUrl}> {repo.full_name.replace('cpachomski/', '')} </a>
                 </li>
               )
             })}

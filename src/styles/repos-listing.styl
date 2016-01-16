@@ -6,7 +6,7 @@
 
   .repos-listing-content
     width: 100%
-    max-width: 800px
+    max-width: 1200px
     padding: 25px
     margin: 0 auto
 
@@ -17,19 +17,59 @@
       padding-left: 0px
 
     li
+      position: relative
       float:left
-      border: 1px solid gray
-      width: 30%
+      @media (min-width: 1000px)
+        width: 30%
+        margin: 1%
+      width: 46%
       margin: 1%
-      min-height: 200px
+      min-height: 400px
+      z-index: 1
+
       &:hover
         .octicon
           color: gray
+
+      .slides-up
+        position: absolute
+        height: 100%
+        width: 100%
+        background-color: gray
+        z-index: 2
+        transition: all 0.2s ease-in
+        svg
+          position: absolute
+          top: 60px
+          width: 100%
+          line
+            stroke: white
+            stroke-width: 10px
+            stroke-dasharray: 10 0
+            stroke-dashoffset: -100
+            transition: all 0.3s ease-in
+
+        &:hover
+          a
+            font-size: 22px
+            transform: translateY(-2px)
+            right: 5%
+
+          line
+            stroke-dasharray: 10 10
+            stroke-width: 10px
+
 
       .octicon
         color: gray
 
       a
-        color: gray
+        position: absolute
+        top: 15px
+        left: 5%
+
+        color: white
+        font-size: 20px
         display: block
+        transition: all .3s ease-in
 
