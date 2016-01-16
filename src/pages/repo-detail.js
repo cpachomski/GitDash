@@ -23,13 +23,13 @@ export default React.createClass({
 
   getInitialState () {
     return {
-      componentHeight: window.innerheight
+      componentHeight: window.innerHeight -60
     }
   },
 
   handleResize () {
     this.setState({
-      componentHeight: window.innerheight
+      componentHeight: window.innerHeight - 60
     })
   },
 
@@ -46,7 +46,7 @@ export default React.createClass({
     let componentStyling = {
       height: '' + this.state.componentHeight
     }
-
+    console.log(componentStyling);
     window.readme = readme;
     return (
       <div className='repo-detail' style={componentStyling} >
