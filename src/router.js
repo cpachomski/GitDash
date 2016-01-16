@@ -95,7 +95,9 @@ export default Router.extend({
 
       //go to repos page with github token and remove auth/callback page from browser history
       this.redirectTo('/repos')
-    })
+    });
+
+    this.renderPage(<MessagePage title='Loading...' message='Fetching Github Data'/>);
   },
 
   fourOhFour () {
