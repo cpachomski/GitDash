@@ -23,13 +23,13 @@ export default React.createClass({
 
   getInitialState () {
     return {
-      componentHeight: window.innerHeight -60
+      componentHeight: window.innerHeight - 100
     }
   },
 
   handleResize () {
     this.setState({
-      componentHeight: window.innerHeight - 60
+      componentHeight: window.innerHeight - 100
     })
   },
 
