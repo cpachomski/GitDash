@@ -2,7 +2,7 @@
 
 
 .repos-listing
-  background-color: gray
+
 
   .repos-listing-content
     width: 100%
@@ -11,18 +11,25 @@
     margin: 0 auto
 
     h2
-      color: white
+      color: gray
+
+    ul
+      padding-left: 0px
 
     li
+      float:left
+      border: 1px solid gray
+      width: 30%
+      margin: 1%
+      min-height: 200px
       &:hover
         .octicon
-          color: white
+          color: gray
 
       .octicon
         color: gray
 
       a
-        border-bottom: 3px dashed gray
-        color: white
-        &:hover
-          border-color: white
+        color: gray
+        display: block
+
