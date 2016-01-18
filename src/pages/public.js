@@ -19,7 +19,7 @@ export default React.createClass({
         <header role='banner'>
           <h1>GitDash
             <svg height='5' width='390'>
-              <line x1='0' y1='0' x2='390' y2='0' className="h1-underline" />
+              <line x1='0' y1='0' x2='390' y2='0' />
             </svg>
           </h1>
 

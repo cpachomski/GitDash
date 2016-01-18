@@ -97,7 +97,7 @@ export default Router.extend({
       this.redirectTo('/repos')
     });
 
-    this.renderPage(<MessagePage title='Loading...' message='Fetching Github Data'/>);
+    this.renderPage(<MessagePage title='Loading' />);
   },
 
   fourOhFour () {
