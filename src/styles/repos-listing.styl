@@ -62,6 +62,7 @@
         vert-centered()
         horiz-centered()
         top: 30%
+        transition: all 0.3s ease-in
 
       &:hover
         transform: scale(1.03)
@@ -69,6 +70,9 @@
         line
           stroke-dasharray: 10 10
           stroke-width: 10px
+
+        .octicon
+          transform: scale(0.5) translateX(-300%)
 
 
 
@@ -84,10 +88,36 @@
       transition: all .3s ease-in
 
 .repo-card-stats
-  margin-top: 200px
-
+  margin-top: 225px
+  clearfix()
 
   .repo-card-stat
-    height: 50px
+    padding: 15px
+    font-size: 12px
+    width: 27%
+    margin: 0 3%
+    display: inline-block
+    position: relative
+
+    &:after
+      position: absolute
+      content: ''
+      width: 100%
+      top: 50px
+      left: 0px
+      height: 2px
+      background-color: white !important
+
+    .stat-name
+      horiz-centered()
+      font-size: 14px
+
+    .stat-val
+      position: absolute
+      horiz-centered()
+      top: 65px
+      font-size: 18px
+
+
 
 

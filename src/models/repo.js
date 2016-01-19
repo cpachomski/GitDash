@@ -12,7 +12,8 @@ export default Model.extend(githubMixin, {
   props: {
     id: 'number',
     name: 'string',
-    full_name: 'string'
+    full_name: 'string',
+    updated_at: 'string'
   },
 
   derived: {

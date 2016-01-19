@@ -36,9 +36,9 @@ export default React.createClass({
                       </svg>
                       <span className="octicon octicon-repo"></span>
                       <ul className='repo-card-stats'>
+                        <RepoCardStat name='Updated' value='1/3/2016' />
                         <RepoCardStat name='Commits' value='32' />
                         <RepoCardStat name='Collaborators' value='2' />
-                        <RepoCardStat name='Open on Github' value='2' />
                       </ul>
                   </a>
         
