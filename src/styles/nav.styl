@@ -1,21 +1,96 @@
 @import 'variables'
+@import 'mixins'
 
 nav.top-nav
   background-color: gray
-  border-bottom: 5px dashed white
   margin-bottom: 0px
-  height: 100px
+
+  top: 0px
+  left: 0px
+  position: fixed
+  z-index: 999
+  width: 100%
 
   ul
     max-width: 1200px
     margin: 0 auto
+    clearfix()
+
 
   li
     background-color: gray
     color: white
-    border-top: 3px dashed gray
-    &:hover
-      border-color: white;
+    height: 100%
+    position: relative
+    padding: 0px 15px
+    float: right
+    margin-top: 30px
+    display: block !important
+
     a
       color: white
-      padding-right: 10px
+      font-size: 20px
+
+    svg
+      position: absolute !important
+      width: 75%
+      height: 3px
+      left: 13%
+      bottom: -10px
+
+      line
+        stroke: white
+        stroke-width: 3px
+        stroke-dash-array: 3 0
+        transition: stroke-dasharray .1s ease-in
+
+    &:not(:first-child):hover
+      line
+        stroke-dasharray: 3 3
+        stroke-dashoffset: -3px
+        stoke-width: 10px
+        animation: anim-dashoffset-right 2s infinite
+        animation-timing-function: linear
+
+
+    &:first-child
+      font-size: 60px
+      float: left
+      margin-top: 0px
+
+      &.scrolling-up
+        line
+          animation: anim-dashoffset-left 1.3s infinite
+          animation-timing-function: linear
+
+      &.scrolling-down
+        line
+          animation: anim-dashoffset-right 1.3s infinite
+          animation-timing-function: linear
+
+
+      span
+        position: relative
+
+        svg
+          height: 2px
+          position: absolute
+          width: calc(100% - 10px)
+          left: 6px
+          bottom: 21px
+
+          line
+            stroke: white
+            stroke-width: 5px
+            stroke-dasharray: 5px 5px
+
+
+
+.account-card{
+  position: fixed
+  top: 100px
+  right: 0px
+  height: 100px
+  width: 100px
+  background-color: red
+}
