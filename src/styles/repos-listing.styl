@@ -38,7 +38,8 @@
       width: 100%
       background-color: gray
       z-index: 2
-      transition: all 0.2s ease-in
+      transition: all 0.3s ease-in
+      overflow: hidden
 
       h4
         color: white
@@ -54,8 +55,22 @@
           stroke-dasharray: 10 0
           stroke-dashoffset: -100
           transition: all 0.3s ease-in
+      .hover-text
+        position: absolute
+        top: 200px
+        opacity: 0
+        left: -300px
+        transition: all 0.3s ease-in-out
+        transition-delay: 0.2s
+        .octicon
+          color: white
+          font-size: 40px
+          horiz-centered()
+          position: absolute
 
-      .octicon
+
+
+      >.octicon-repo
         color: white
         font-size: 100px
         position: absolute
@@ -66,14 +81,17 @@
 
       &:hover
         transform: scale(1.03)
-        box-shadow: -1px 13px 68px -12px rgba(0,0,0,0.75)
+        box-shadow: -1px 13px 100px -12px rgba(0,0,0,0.75)
+
         line
           stroke-dasharray: 10 10
-          stroke-width: 10px
 
-        .octicon
-          transform: scale(0.5) translateX(-300%)
+        .octicon-repo
+          transform: scale(0.5) translate(-100%, -50%)
 
+        .hover-text
+          opacity: 1
+          horiz-centered()
 
 
     a

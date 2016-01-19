@@ -35,6 +35,8 @@ export default React.createClass({
                         <line x1='0' y1='0' x2='100%'  y2='0' className="card-header-underline" />
                       </svg>
                       <span className="octicon octicon-repo"></span>
+                      <span className="hover-text">Edit Repo   <span className="octicon octicon-chevron-right"></span> </span>
+
                       <ul className='repo-card-stats'>
                         <RepoCardStat name='Updated' value='1/3/2016' />
                         <RepoCardStat name='Commits' value='32' />
