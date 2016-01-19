@@ -1,27 +1,82 @@
-gray = #333
+@import "variables"
 
-.repos-listing
-  background-color: gray
 
-  .repos-listing-content
-    width: 100%
-    max-width: 800px
-    padding: 25px
-    margin: 0 auto
 
-    h2
-      color: white
+.repos-listing-content
+  width: 100%
+  max-width: 1200px
+  padding: 25px
+  margin: 0 auto
 
-    li
-      &:hover
-        .octicon
-          color: white
+  h2
+    color: gray
 
+  ul
+    padding-left: 0px
+
+  li:not(.repo-card-stat)
+    position: relative
+    float:left
+    @media (min-width: 1000px)
+      width: 30%
+      margin: 1%
+    width: 46%
+    margin: 1%
+    min-height: 400px
+    z-index: 1
+
+    &:hover
       .octicon
         color: gray
 
-      a
-        border-bottom: 3px dashed gray
-        color: white
-        &:hover
-          border-color: white
+    .slides-up
+      position: absolute
+      height: 100%
+      width: 100%
+      background-color: gray
+      z-index: 2
+      transition: all 0.2s ease-in
+      svg
+        position: absolute
+        top: 60px
+        width: 100%
+        line
+          stroke: white
+          stroke-width: 10px
+          stroke-dasharray: 10 0
+          stroke-dashoffset: -100
+          transition: all 0.3s ease-in
+
+      &:hover
+        transform: scale(1.01)
+        box-shadow: -1px 13px 68px -12px rgba(0,0,0,0.75)
+        a
+          font-size: 20px
+          right: 5%
+        line
+          stroke-dasharray: 10 10
+          stroke-width: 10px
+
+
+    .octicon
+      color: gray
+
+    a
+      position: absolute
+      top: 15px
+      left: 5%
+      right: 0px
+      font-size: 20px
+      color: white
+      font-size: 20px
+      display: block
+      transition: all .3s ease-in
+
+.repo-card-stats
+  margin-top: 200px
+  border: 1px solid red
+
+  .repo-card-stat
+    height: 50px
+    border: 1px solid blue
+

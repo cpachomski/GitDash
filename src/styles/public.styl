@@ -1,5 +1,5 @@
-gray = #333
-
+@import "variables"
+@import "mixins"
 
 body
 	transition: all 0.5s ease-out
@@ -13,7 +13,7 @@ body
 					stroke-width: 5px
 					stroke: white
 					stroke-dasharray: 10 10
-					stroke-dashoffset: 0
+					stroke-dashoffset: -20px
 
 			p
 				color: white
@@ -41,16 +41,17 @@ body
 	  	transition: border-color 0.5s ease-in 1s
 	h1
 		position: relative
+		font-size: 120px
 		svg
 			position: absolute
-			bottom: 0px
-			left: 0px
+			bottom:40px
+			left: 15px
 
 			line
 				stroke-width: 5px
 				stroke: gray
 				stroke-dasharray: 10 10
-				stroke-dashoffset: 100px
+				stroke-dashoffset: 10px
 				transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s ease-out;
 
 
@@ -82,7 +83,7 @@ body
 			background-color: gray
 			top: 50%
 			left: 50%
-			line-height: 55px
+			line-height: 57px
 			height: (100% - 7)
 			width: calc(100% - 5px)
 			text-align: center

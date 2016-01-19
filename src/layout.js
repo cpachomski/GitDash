@@ -7,6 +7,12 @@ export default React.createClass({
 
   displayName: "layout",
 
+  propTypes: {
+    human: React.PropTypes.object.isRequired,
+    children: React.PropTypes.element.isRequired,
+  },
+
+
   render () {
     const {human} = this.props;
 

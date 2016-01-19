@@ -1,0 +1,39 @@
+@import 'mixins'
+@import 'variables'
+
+.loading-content
+  vert-centered()
+  horiz-centered()
+  top: 30%
+  h1
+    font-size: 55px
+    position: relative
+    color: gray
+
+  svg
+    position: absolute
+    height: 60px
+    width: calc(100% - 12px)
+    left: 8px
+    bottom: -37px
+
+    line
+      stroke: gray
+      width: 100%
+      strok-dashoffset: 0px
+      stroke-width: 5px
+      stroke-dasharray: 10 10
+      animation: anim-dashoffset 1.3s infinite
+      animation-timing-function: ease-in-out
+
+@keyframes anim-dashoffset
+  from
+    stroke-dashoffset: 0px
+  to
+    stroke-dashoffset: -100px
+
+
+
+
+
+

@@ -18,8 +18,8 @@ export default React.createClass({
       <div className='public-container'>
         <header role='banner'>
           <h1>GitDash
-            <svg height='5' width='150'>
-              <line x1='0' y1='0' x2='150' y2='0' className="h1-underline" />  
+            <svg height='5' width='390'>
+              <line x1='0' y1='0' x2='390' y2='0' />
             </svg>
           </h1>
 
@@ -27,7 +27,7 @@ export default React.createClass({
         <div>
           <p>Maybe you'll finally finish that side project. Maybe you won't <br/></p>
 
-        
+
           <a href='/login' className='login-button' onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}>
             <svg height='60' width='300'>
               <rect className='shape' height='60' width='300'/>
