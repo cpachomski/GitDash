@@ -21,39 +21,6 @@ export default React.createClass({
     }
   },
 
-  componentDidMount () {
-    window.addEventListener('scroll', this.handleScroll)
-
-  },
-
-  handleScroll () {
-
-    if (document.body.scrollTop > this.state.lastScrollTop) {
-      // scrolling down
-      
-      this.setState({
-        scrollingDown: true,
-        lastScrollTop: document.body.scrollTop
-      })
-
-    } else {
-      //scrolling up
-      
-      this.setState({
-        scrollingUp: true,
-        lastScrollTop: document.body.scrollTop
-      })
-
-    }
-
-    setTimeout( () => {
-      this.setState({
-        scrollingUp: false,
-        scrollingDown: false
-      })
-
-    }, 10);
-  },
 
   render () {
     const {human} = this.props;

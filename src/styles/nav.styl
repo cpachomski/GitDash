@@ -41,16 +41,15 @@ nav.top-nav
       line
         stroke: white
         stroke-width: 3px
-        stroke-dash-array: 3 0
-        transition: stroke-dasharray .1s ease-in
+        stroke-dash-array: 5 0
+        transition: stroke-dasharray .3s ease-in
 
     &:not(:first-child):hover
       line
-        stroke-dasharray: 3 3
+        stroke-dasharray: 5 5
         stroke-dashoffset: -3px
         stoke-width: 10px
-        animation: anim-dashoffset-right 2s infinite
-        animation-timing-function: linear
+
 
 
     &:first-child
@@ -58,14 +57,9 @@ nav.top-nav
       float: left
       margin-top: 0px
 
-      &.scrolling-up
+      &:hover
         line
-          animation: anim-dashoffset-left 1.3s infinite
-          animation-timing-function: linear
-
-      &.scrolling-down
-        line
-          animation: anim-dashoffset-right 1.3s infinite
+          animation: anim-dashoffset-right 1s infinite
           animation-timing-function: linear
 
 
