@@ -29,18 +29,19 @@ export default React.createClass({
             {repos.map( (repo) => {
               return (
                 <li key={repo.id}>
-                  <div className='slides-up'>
-                      <a href={repo.appUrl}> {repo.full_name.split('/').pop()} </a>
+                  <a className='slides-up' href={repo.appUrl} >
+                      <h4> {repo.full_name.split('/').pop()} </h4>
                       <svg width="100" height="10px" >
                         <line x1='0' y1='0' x2='100%'  y2='0' className="card-header-underline" />
                       </svg>
+                      <span className="octicon octicon-repo"></span>
                       <ul className='repo-card-stats'>
                         <RepoCardStat name='Commits' value='32' />
                         <RepoCardStat name='Collaborators' value='2' />
                         <RepoCardStat name='Open on Github' value='2' />
                       </ul>
-                  </div>
-                  <span className="octicon octicon-repo"></span>
+                  </a>
+        
                 </li>
               )
             })}

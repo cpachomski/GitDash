@@ -39,6 +39,11 @@
       background-color: gray
       z-index: 2
       transition: all 0.2s ease-in
+
+      h4
+        color: white
+        padding: 15px
+        margin: 0px
       svg
         position: absolute
         top: 60px
@@ -50,19 +55,22 @@
           stroke-dashoffset: -100
           transition: all 0.3s ease-in
 
+      .octicon
+        color: white
+        font-size: 100px
+        position: absolute
+        vert-centered()
+        horiz-centered()
+        top: 30%
+
       &:hover
         transform: scale(1.03)
         box-shadow: -1px 13px 68px -12px rgba(0,0,0,0.75)
-        a
-          font-size: 20px
-          right: 5%
         line
           stroke-dasharray: 10 10
           stroke-width: 10px
 
 
-    .octicon
-      color: gray
 
     a
       position: absolute
@@ -77,9 +85,9 @@
 
 .repo-card-stats
   margin-top: 200px
-  border: 1px solid red
+
 
   .repo-card-stat
     height: 50px
-    border: 1px solid blue
+
 
