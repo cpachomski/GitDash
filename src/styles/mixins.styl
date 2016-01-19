@@ -8,3 +8,29 @@ horiz-centered()
   left: 50%
   transform: translateX(-50%)
 
+clearfix()
+  zoom 1
+  &:after
+  &:before
+    content ""
+    display table
+  &:after
+    clear both
+
+
+@keyframes anim-dashoffset-right
+  from
+    stroke-dashoffset: 0px
+  to
+    stroke-dashoffset: -100px
+
+@keyframes anim-dashoffset-left
+  from
+    stroke-dashoffset: 0px
+  to
+    stroke-dashoffset: 100px
+
+
+
+
+

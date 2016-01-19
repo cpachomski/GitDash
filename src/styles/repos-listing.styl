@@ -1,18 +1,21 @@
 @import "variables"
+@import "mixins"
 
 
 
 .repos-listing-content
+
   width: 100%
   max-width: 1200px
   padding: 25px
-  margin: 0 auto
+  margin: 100px auto 0px
 
   h2
     color: gray
 
   ul
     padding-left: 0px
+    clearfix()
 
   li:not(.repo-card-stat)
     position: relative
@@ -48,7 +51,7 @@
           transition: all 0.3s ease-in
 
       &:hover
-        transform: scale(1.01)
+        transform: scale(1.03)
         box-shadow: -1px 13px 68px -12px rgba(0,0,0,0.75)
         a
           font-size: 20px
