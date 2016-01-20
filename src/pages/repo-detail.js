@@ -14,15 +14,6 @@ export default React.createClass({
     repo: React.PropTypes.object.isRequired
   },
 
-  onAddClick () {
-    this.props.labels.add({
-      name: '',
-      color: '',
-      editing: true,
-      saved: false
-    }, {at: 0})
-  },
-
   getInitialState () {
     return {
       componentHeight: window.innerHeight - 100,
@@ -63,8 +54,10 @@ export default React.createClass({
         <h1>{repo.full_name}</h1>
         <TabMenu
             currentTab={this.state.currentTab}
-            tabList={this.state.tabsList} />
-
+            tabList={this.state.tabsList}
+            changeTab={this.changeTab}
+        />
+        <TabContent readme={readme} labels={labels} currentTab={this.state.currentTab} />
       </div>
     )
   }
@@ -80,13 +73,3 @@ export default React.createClass({
 
 
 
-// <section id='labels-section'>
-//   <p>
-//     <button onClick={this.onAddClick} className="button">Add New</button>
-//   </p>
-//   <ul>
-//     { labels.map((label) => {
-//      return <LabelItem key={label.name} label={label}/>
-//    })}
-//   </ul>
-// </section>

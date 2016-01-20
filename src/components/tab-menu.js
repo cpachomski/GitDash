@@ -18,7 +18,7 @@ export default React.createClass({
                        key={tab.id}
                        url={tab.url}
                        title={tab.title}
-                       isCurrent={this.props.currentTab === tab.id} />
+                       isActive={this.props.currentTab === tab.id} />
                  )
               }.bind(this))
             }

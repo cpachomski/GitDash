@@ -11,7 +11,7 @@ export default React.createClass({
   render () {
     return (
       <li className={this.props.isActive ? 'active' : null}>
-        <a onClick={this.handleClick} href={this.props.url}>
+        <a onClick={this.handleClick}>
           {this.props.title}
         </a>
       </li>
