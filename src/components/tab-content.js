@@ -1,5 +1,5 @@
 import React from 'react'
-import ReadmeSection from './readme-preview'
+import ReadmeSection from './readme-section'
 import LabelItem from './label-item'
 
 export default React.createClass({

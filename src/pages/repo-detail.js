@@ -1,7 +1,5 @@
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
-import LabelItem from '../components/label-item'
-import ReadmePreview from '../components/readme-preview'
 import TabMenu from '../components/tab-menu'
 import TabContent from '../components/tab-content'
 
