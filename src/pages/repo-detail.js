@@ -2,6 +2,8 @@ import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
 import LabelItem from '../components/label-item'
 import ReadmePreview from '../components/readme-preview'
+import TabMenu from '../components/tab-menu'
+import TabContent from '../components/tab-content'
 
 export default React.createClass({
   mixins: [ampersandMixin],
@@ -23,8 +25,17 @@ export default React.createClass({
 
   getInitialState () {
     return {
-      componentHeight: window.innerHeight - 100
+      componentHeight: window.innerHeight - 100,
+      currentTab: 1,
+      tabsList: [
+        {'id': 1, 'title': 'Readme', 'url': '/readme'},
+        {'id': 2, 'title': 'Labels', 'url': '/labels'}
+      ]
     }
+  },
+
+  changeTab (tab) {
+    this.setState({ currentTab: tab.id });
   },
 
   handleResize () {
@@ -47,32 +58,35 @@ export default React.createClass({
       height: '' + this.state.componentHeight
     }
 
-    window.readme = readme;
     return (
       <div className='repo-detail' style={componentStyling} >
         <h1>{repo.full_name}</h1>
-        <div id='tabs'>
-          <nav>
-            <ul>
-              <li><span>Readme</span></li>
-              <li><span>Labels</span></li>
-            </ul>
-          </nav>
-        </div>
-        <section id='readme-section'>
-          <ReadmePreview readme={readme} />
-        </section>
-        <section id='labels-section'>
-          <p>
-            <button onClick={this.onAddClick} className="button">Add New</button>
-          </p>
-          <ul>
-            { labels.map((label) => {
-             return <LabelItem key={label.name} label={label}/>
-           })}
-          </ul>
-        </section>
+        <TabMenu
+            currentTab={this.state.currentTab}
+            tabList={this.state.tabsList} />
+
       </div>
     )
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+// <section id='labels-section'>
+//   <p>
+//     <button onClick={this.onAddClick} className="button">Add New</button>
+//   </p>
+//   <ul>
+//     { labels.map((label) => {
+//      return <LabelItem key={label.name} label={label}/>
+//    })}
+//   </ul>
+// </section>
