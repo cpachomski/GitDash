@@ -2,9 +2,7 @@
 
 .repo-detail
   margin: 0 auto
-  max-width: 1200px
   margin-top: 100px
-  padding: 25px
   height: 100%
   position: fixed
 
@@ -25,17 +23,35 @@
         display: block
         margin-right: 10px
         padding: 8px 15px 5px 15px
-        border: 1px solid gray
+        border: 3px dashed gray
         border-bottom: none
         float: left
         min-width: 100px
         min-height: 30px
         text-align: center
 
-        &:hover
+        &:hover, &.active
           cursor: pointer
-          border-top: 3px solid gray
-          padding-top: 6px
+          border-top: 3px dashed gray
+          padding-top: 8px
+
+        &.active
+          &:before, &:after
+            content: ''
+            position: absolute
+            height: 6px
+            border-bottom:3px dashed gray
+            bottom: -3px
+
+            right: 100%
+            width: 4000px
+          &:after
+            right: auto
+            left: 100%
+            width: 4000px
+        a
+          color: gray
+
 
 .content
   height: calc(100%)
