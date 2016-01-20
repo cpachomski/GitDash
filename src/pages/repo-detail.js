@@ -1,7 +1,7 @@
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
-import LabelItem from '../templates/label-item'
-import ReadmePreview from '../templates/readme-preview'
+import LabelItem from '../components/label-item'
+import ReadmePreview from '../components/readme-preview'
 
 export default React.createClass({
   mixins: [ampersandMixin],
@@ -46,20 +46,32 @@ export default React.createClass({
     let componentStyling = {
       height: '' + this.state.componentHeight
     }
-    console.log(componentStyling);
+
     window.readme = readme;
     return (
       <div className='repo-detail' style={componentStyling} >
         <h1>{repo.full_name}</h1>
-        <ReadmePreview readme={readme} />
-        <p>
-          <button onClick={this.onAddClick} className="button">Add New</button>
-        </p>
-        <ul>
-          { labels.map((label) => {
-           return <LabelItem key={label.name} label={label}/>
-         })}
-        </ul>
+        <div id='tabs'>
+          <nav>
+            <ul>
+              <li><span>Readme</span></li>
+              <li><span>Labels</span></li>
+            </ul>
+          </nav>
+        </div>
+        <section id='readme-section'>
+          <ReadmePreview readme={readme} />
+        </section>
+        <section id='labels-section'>
+          <p>
+            <button onClick={this.onAddClick} className="button">Add New</button>
+          </p>
+          <ul>
+            { labels.map((label) => {
+             return <LabelItem key={label.name} label={label}/>
+           })}
+          </ul>
+        </section>
       </div>
     )
   }

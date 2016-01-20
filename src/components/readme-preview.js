@@ -23,13 +23,11 @@ export default React.createClass({
 
 
     return (
-      <section id='readme-tab'>
-        <div className="readme-content">
-            <h4> README </h4>
-            <p> {new Buffer(readme.content + '', 'base64').toString('ascii')}
-            </p>
-        </div>
-      </section>
+      <div className="readme-content">
+          <h4> README </h4>
+          <p> {new Buffer(readme.content + '', 'base64').toString('ascii')}
+          </p>
+      </div>
     )
 
   }

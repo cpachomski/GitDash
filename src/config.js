@@ -12,6 +12,4 @@ const config = {
 }[window.location.hostname]
 
 
-console.log(config);
-
 export default config;

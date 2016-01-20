@@ -1,5 +1,5 @@
 import React from 'react'
-import RepoCardStat from '../templates/repo-card-stat'
+import RepoCardStat from '../components/repo-card-stat'
 import ampersandMixin from 'ampersand-react-mixin'
 
 
@@ -43,7 +43,7 @@ export default React.createClass({
                         <RepoCardStat name='Collaborators' value='2' />
                       </ul>
                   </a>
-        
+
                 </li>
               )
             })}
