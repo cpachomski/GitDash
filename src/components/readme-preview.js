@@ -2,6 +2,7 @@ import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
 import utf8 from 'utf8'
 import base64 from 'base64-js'
+import marked from 'marked'
 
 
 
@@ -22,10 +23,13 @@ export default React.createClass({
 
 
     return (
-      <div className="readme-content">
-          <h4> README </h4>
-          <p> {new Buffer(readme.content + '', 'base64').toString('ascii')}</p>
-      </div>
+      <section id='readme-tab'>
+        <div className="readme-content">
+            <h4> README </h4>
+            <p> {new Buffer(readme.content + '', 'base64').toString('ascii')}
+            </p>
+        </div>
+      </section>
     )
 
   }

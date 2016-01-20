@@ -90,9 +90,9 @@ export default React.createClass({
     }
 
     return(
-      <div>
+      <section id='labels-tab'>
         {content}
-      </div>
+      </section>
     )
   }
 
