@@ -18,7 +18,7 @@ export default React.createClass({
 
 		return (
 			<section id='labels-section'>
-
+				<h3>Edit Labels </h3>
 	            <ul>
 	              { this.props.labels.map((label) => {
 	               	return <LabelItem key={label.name} label={label} />

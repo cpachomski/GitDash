@@ -19,8 +19,8 @@ export default React.createClass({
   },
 
   fixLongString (string) {
-    if (string.length > 15){
-      return string.substring(0,25) + '...'
+    if (string.length > 20){
+      return string.substring(0,20) + '...'
     }
 
     return string
