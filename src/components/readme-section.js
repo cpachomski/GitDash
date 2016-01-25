@@ -10,16 +10,12 @@ import readme_section from '../styles/readme-section.styl'
 export default React.createClass({
   mixins: [ampersandMixin],
 
-  getInitalState () {
-    const {readme} = this.props
-    return {readme}
-  },
-
   createMarkup(contentString) {
     return {__html: contentString };
   },
 
   render () {
+    const {readme} = this.props
 
     let readmeContent = new Buffer(readme.content + '', 'base64').toString('ascii');
 
@@ -30,7 +26,7 @@ export default React.createClass({
       <section id='readme-section'>
         <div className='readme-content'>
           <div className="markup-readme">
-              <h3> Edit README </h3>
+              <h4> Edit README </h4>
               <p> {readmeContent}
               </p>
           </div>
