@@ -12,6 +12,13 @@ export default React.createClass({
     repos: React.PropTypes.object.isRequired
   },
 
+  convertDate (dateString) {
+    let date = new Date(dateString)
+
+    return (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
+
+  },
+
   render () {
     const {repos} = this.props
 
@@ -38,7 +45,7 @@ export default React.createClass({
                       <span className="hover-text">Edit Repo   <span className="octicon octicon-chevron-right"></span> </span>
 
                       <ul className='repo-card-stats'>
-                        <RepoCardStat name='Updated' value='1/3/2016' />
+                        <RepoCardStat name='Updated' value={this.convertDate(repo.updated_at)} />
                         <RepoCardStat name='Commits' value='32' />
                         <RepoCardStat name='Collaborators' value='2' />
                       </ul>
