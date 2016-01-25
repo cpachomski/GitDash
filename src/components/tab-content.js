@@ -1,16 +1,10 @@
 import React from 'react'
 import ReadmeSection from './readme-section'
-import LabelItem from './label-item'
+import LabelSetion from './label-section'
+
 
 export default React.createClass({
-  onAddClick () {
-    this.props.labels.add({
-      name: '',
-      color: '',
-      editing: true,
-      saved: false
-    }, {at: 0})
-  },
+ 
 
   render () {
 
@@ -19,22 +13,11 @@ export default React.createClass({
       <div className="content">
 
         {this.props.currentTab === 1 ?
-          <section id='readme-section'>
-            <ReadmeSection readme={this.props.readme} />
-          </section>
+          <ReadmeSection readme={this.props.readme} />
         :null}
 
         {this.props.currentTab === 2 ?
-          <section id='labels-section'>
-            <p>
-              <button onClick={this.onAddClick} className="button">Add New</button>
-            </p>
-            <ul>
-              { this.props.labels.map((label) => {
-               return <LabelItem key={label.name} label={label}/>
-             })}
-            </ul>
-          </section>
+          <LabelSetion labels={this.props.labels} />
         :null}
       </div>
     )

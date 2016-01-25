@@ -1,0 +1,62 @@
+@import 'mixins'
+@import 'variables'
+
+
+
+
+#labels-section
+	max-width: 800px
+	height: 100%
+	overflow-y: scroll
+	position: relative
+	clearfix()
+	margin: 0 auto
+
+	ul
+		margin-top: 50px
+		float: left
+		width: 60%
+		height: 100%
+
+		li
+			padding-left: 25px
+			display: block
+			margin: 65px 0px
+
+			form.label
+				display: block
+
+				input
+					padding: 7px 0px
+					&:nth-child(3)
+						margin-left: 10px
+
+				.active-label-btns
+					margin-right: 10px
+					button
+						display: inline-block
+						margin: 10px 10px
+						float: right
+						background-color: gray
+						border-radius: 0px
+						min-width: 100px
+						color: white
+						padding 7px
+						border: 3px dashed gray
+
+						&:hover
+							background-color: white
+							color: gray
+
+	>button
+		position: absolute
+		margin-top: 50px
+		right: 25px
+		background-color: gray
+		border-radius: 0px
+		min-width: 200px
+		border: 3px dashed gray
+
+		&:hover
+			background-color: white
+			color: gray

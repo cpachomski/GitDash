@@ -13,7 +13,9 @@ export default Model.extend(githubMixin, {
     id: 'number',
     name: 'string',
     full_name: 'string',
-    updated_at: 'string'
+    updated_at: 'string',
+    watchers_count: 'number',
+    forks_count: 'number'
   },
 
   derived: {

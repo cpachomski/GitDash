@@ -16,9 +16,16 @@ export default React.createClass({
     let date = new Date(dateString)
 
     return (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
-
   },
 
+  fixLongString (string) {
+    if (string.length > 15){
+      return string.substring(0,25) + '...'
+    }
+
+    return string
+  },
+ 
   render () {
     const {repos} = this.props
 
@@ -37,7 +44,7 @@ export default React.createClass({
               return (
                 <li key={repo.id}>
                   <a className='slides-up' href={repo.appUrl} >
-                      <h4> {repo.full_name.split('/').pop()} </h4>
+                      <h4> {this.fixLongString(repo.full_name.split('/').pop())} </h4>
                       <svg width="100" height="10px" >
                         <line x1='0' y1='0' x2='100%'  y2='0' className="card-header-underline" />
                       </svg>
@@ -46,8 +53,8 @@ export default React.createClass({
 
                       <ul className='repo-card-stats'>
                         <RepoCardStat name='Updated' value={this.convertDate(repo.updated_at)} />
-                        <RepoCardStat name='Commits' value='32' />
-                        <RepoCardStat name='Collaborators' value='2' />
+                        <RepoCardStat name='Watchers' value={repo.watchers_count} />
+                        <RepoCardStat name='Forks' value={repo.forks_count} />
                       </ul>
                   </a>
 
