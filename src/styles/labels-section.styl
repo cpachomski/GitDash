@@ -6,7 +6,6 @@
 
 #labels-section
 	max-width: 800px
-	height: 100%
 	overflow-y: scroll
 	position: relative
 	clearfix()
@@ -21,17 +20,18 @@
 		li
 			padding-left: 25px
 			display: block
-			margin: 65px 0px
 
 			form.label
 				display: block
-
+				height: auto
+				clearfix()
 				input
 					padding: 7px 0px
 					&:nth-child(3)
 						margin-left: 10px
 
 				.active-label-btns
+					clearfix()
 					margin-right: 10px
 					button
 						display: inline-block
