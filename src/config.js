@@ -6,7 +6,7 @@ const config = {
   },
 
   'gitdash.surge.sh': {
-    authUrl: 'https://cppgitdash.herokuapp.com/authenticate',
+    authUrl: 'https://gitdashcpp.herokuapp.com/authenticate',
     clientId: 'be934f802c4f3e23ad8c'
   }
 }[window.location.hostname]
